@@ -5,6 +5,114 @@
   src: url(/assets/fonts/Figtree-VariableFont_wght.ttf);
 }
 
+:root {
+  --color-yellow: hsl(47, 88%, 63%);
+  --color-black: hsl(0, 0%, 7%);
+  --color-grey: hsl(0, 0%, 42%);
+  --color-white: hsl(0, 0%, 100%);
+
+  --ff-main: "Figtree", sans-serif;
+
+  --fs-text: 0.875rem;
+  --fs-description: 1rem;
+  --fs-title: 1.5rem;
+
+  --fw-bold: 800;
+  --fw-regular: 500;
+
+  box-sizing: border-box;
+  line-height: 150%;
+}
+
+/*layout styles*/
+body {
+  background-color: var(--color-yellow);
+  font-family: var(--ff-main);
+  font-size: var(--fs-text);
+  font-weight: var(--fw-regular);
+}
+
+.container {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.card {
+  max-width: 21rem;
+  background-color: var(--color-white);
+  padding: 1.5rem;
+  border: 1px solid var(--color-black);
+  border-radius: 1.25rem;
+  box-shadow: 0.5rem 0.5rem black;
+}
+
+/*content styles*/
+.svg-art {
+  display: block;
+  border-radius: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.tag {
+  display: inline-block;
+  font-weight: var(--fw-bold);
+  background-color: var(--color-yellow);
+  color: var(--color-black);
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  padding: 0 0.75rem;
+  border-radius: 0.25rem;
+}
+
+.publish-date {
+  font-size: var(--fs-text);
+  color: var(--color-black);
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: var(--fs-title);
+  font-weight: var(--fw-bold);
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+  transition: color 0.15s;;
+}
+
+.title:hover {
+  color: var(--color-yellow);
+}
+
+.description {
+  font-size: var(--fs-description);
+  color: var(--color-grey);
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+/*user footer styles*/
+.user-image {
+  width: 2rem;
+}
+
+.user-info {
+  display: grid;
+  column-gap: 0.75rem;
+  grid-template-columns: min-content 1fr;
+  align-items: center;
+}
+
+.user-name {
+  font-weight: var(--fw-bold);
+  margin: 0;
+}
+
 /*default footer styles*/
-.attribution { font-size: 11px; text-align: center; }
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  background-color: var(--color-yellow);
+}
 .attribution a { color: hsl(228, 45%, 44%); }
+
